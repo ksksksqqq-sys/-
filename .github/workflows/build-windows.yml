@@ -30,7 +30,7 @@ jobs:
           pyinstaller --noconfirm --clean --onefile --windowed --name SHP_DXF_Converter --collect-all pyproj --collect-all shapely shp_dxf_converter.py
 
       - name: Upload EXE artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: SHP_DXF_Converter-Windows11
           path: dist/SHP_DXF_Converter.exe
