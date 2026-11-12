@@ -155,7 +155,7 @@ def convert(shp_path, out_path, target_epsg, label_fields, encoding, progress_cb
             x, y = label_anchor(geom)
             vals = dict(zip(field_names, list(sr.record)))
             label = " | ".join(
-                f"{name}: {field_text(vals.get(name, ''))}"
+                field_text(vals.get(name, ""))
                 for name in label_fields
                 if field_text(vals.get(name, ""))
             )
